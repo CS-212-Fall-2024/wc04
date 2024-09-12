@@ -1,0 +1,67 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath,amssymb, amsthm}
+\usepackage[a4paper]{geometry}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{arabtex}
+\usepackage{utf8}
+\setcode{utf8}
+
+
+\title{Weekly Challenge 04: Regular Expressions}
+\author{CS 212 Nature of Computation\\Habib University}
+\date{Fall 2024}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{claim}
+\newtheorem{claim}{Claim}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+% \printanswers %uncomment this
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+    \titledquestion{Closures}
+    Given a language, $L$, and the definitions below, prove or disprove the given claim.
+
+    \begin{definition}[Power on a language]
+        Given a language $L$, we define $L^n$, for $n \in \mathbb{N}$ recursively as follows:
+        \begin{enumerate}
+            \item $L^0 = \{\varepsilon\}$ 
+            \item $L^1 = L$
+            \item $L^{k+1} = \{w_1w_2\mid w_1 \in L^k \land w_2 \in L\}$
+        \end{enumerate}
+    \end{definition}
+    \begin{definition}[Kleene closure]
+        With this definition of $L^n$, we can define Kleene closure of $L$, $L^*$ as follows:
+        $$L^*=\bigcup_{i \in \mathbb{N}} L^i$$
+    \end{definition}
+    \begin{definition}[Positive closure]
+        With this definition of $L^n$, we can define Positive closure of $L$, $L^+$ as follows:
+        $$L^+=\bigcup_{i \in \mathbb{Z}^+} L^i$$
+    \end{definition}
+    \begin{claim}
+      $(L^+)^*=(L^*)^+$
+    \end{claim}  
+    
+    \textbf{Note:} $\mathbb{N}$ here denotes the set of natural numbers which includes 0. See \href{https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers}{von Neumann ordinals} for the construction of $\mathbb{N}$.
+    $\mathbb{Z}^+$ denotes the set of positive integers.
+    % Enter your solution below
+  \begin{solution}
+    
+  \end{solution}
+  
+\end{questions}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
